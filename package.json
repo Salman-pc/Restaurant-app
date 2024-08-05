@@ -1,8 +1,8 @@
 {
-  "homepage": "https://github.io/Salman-pc/Restaurant--app",
   "name": "reactchalange",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://Salman-pc.github.io/Restaurant--app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -23,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
