@@ -82,7 +82,7 @@ function FilteredDishes() {
     });
 
     return (
-        <div className="filtered-dishes font-mono h-full pt-8 m-auto max-w-full">
+        <div className="filtered-dishes font-mono h-auto pt-8 m-auto  w-full">
             <div className="container">
                 <div className="text-center mb-8">
                     <h2 className="filtered-dishes-content text-3xl pb-4">Choose Your Dishes</h2>
