@@ -21,7 +21,7 @@ function Menu(){
                 <AppProvider>
                     <Header/>        
                         <Routes>
-                            <Route path="/" element={ <Allmenu>
+                            <Route  path="/" element={ <Allmenu>
                                 <Heros/>  
                                 <SpecialDishes />            
                                 <FilteredDishes /> 
