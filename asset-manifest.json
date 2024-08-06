@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Restaurant-app/static/css/main.107029b4.css",
+    "main.js": "/Restaurant-app/static/js/main.2b9af328.js",
+    "static/media/frntimg.png": "/Restaurant-app/static/media/frntimg.ec7cca1f341316f943d6.png",
+    "static/media/Zomato Logo _ 01 - PNG Logo Vector Brand Downloads (SVG, EPS).png": "/Restaurant-app/static/media/Zomato Logo _ 01 - PNG Logo Vector Brand Downloads (SVG, EPS).2592953177b6e0012eea.png",
+    "static/media/image.png": "/Restaurant-app/static/media/image.4faf798b0840d6a8f2b3.png",
+    "static/media/Swiggy Logo _ SVG _ Real Company _ Alphabet, Letter S Logo.png": "/Restaurant-app/static/media/Swiggy Logo _ SVG _ Real Company _ Alphabet, Letter S Logo.4c7c933f712bdef030fc.png",
+    "static/media/ubers eats.png": "/Restaurant-app/static/media/ubers eats.91156f48199a472bde97.png",
+    "static/media/Iphone-spinner-2.gif": "/Restaurant-app/static/media/Iphone-spinner-2.d3fbaf2b81fd92c49692.gif",
+    "static/media/foodpanda-logo-RGB-stacked.png": "/Restaurant-app/static/media/foodpanda-logo-RGB-stacked.b2cb2bdb8f74cdddc1bf.png",
+    "index.html": "/Restaurant-app/index.html",
+    "main.107029b4.css.map": "/Restaurant-app/static/css/main.107029b4.css.map",
+    "main.2b9af328.js.map": "/Restaurant-app/static/js/main.2b9af328.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.107029b4.css",
+    "static/js/main.2b9af328.js"
+  ]
+}
