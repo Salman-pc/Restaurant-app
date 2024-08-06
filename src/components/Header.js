@@ -22,13 +22,13 @@ function Header() {
     <header className='heder bg-[#dba607] flex fixed z-10 items-center w-full h-[75px] shadow-lg p-2'>
       <nav className='flex h-full w-full'>
         <div className='logo w-[61px] h-7'>
-          <RouterLink to='/'>
+          <RouterLink to='/Restaurant-app'>
             <img className='rounded-full ml-2 transition-transform duration-300 hover:scale-105' src={image} alt="Logo" />
           </RouterLink>
         </div>
         <ul className='flex ml-auto space-x-4 items-center mr-4'>
           <li>
-            <RouterLink to='/' className='homecheckout hover:text-gray-500' onClick={handleHomeClick}>Home</RouterLink>
+            <RouterLink to='/Restaurant-app' className='homecheckout hover:text-gray-500' onClick={handleHomeClick}>Home</RouterLink>
           </li>
           <li>
             <RouterLink to='/checkout' className='homecheckout hover:text-gray-500' onClick={handleCartClick}>Cart</RouterLink>
