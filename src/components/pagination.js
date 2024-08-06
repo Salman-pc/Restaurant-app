@@ -15,8 +15,8 @@ function Pagination(props) {
     let pages=numberofpages.map((pagenumber)=>{
         const isActive = props.currentpage === pagenumber;
         return (
-            <li className={`cursor-pointer px-4 py-2 mx-1 border rounded-lg transition-colors duration-200 
-                ${isActive ? 'bg-[#ffb902] text-white border-blue-600' : 'bg-white text-black border-gray-300'}
+            <li className={` hover:scale-105 cursor-pointer px-4 py-2 mx-1 border rounded-lg transition-colors duration-200 
+                ${isActive ? 'transition-transform duration-300 hover:scale-105 bg-[#ffb902] text-white border-blue-600' : 'bg-white text-black border-gray-300'}
                 hover:bg-[#eba902] hover:text-white`} id={pagenumber} onClick={shownextdishhandler}>{pagenumber}</li>
         )
     })

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Statecontext } from "../context/AppProvider";
 
-const Checkout = () => {
+const Cart = () => {
   const cartpackege = useContext(Statecontext);
 
   return (
@@ -10,7 +10,7 @@ const Checkout = () => {
         Your Cart
       </h1>
       {cartpackege.cartitem && cartpackege.cartitem.length > 0 ? (
-        <ul className="flex flex-wrap  gap-4">
+        <ul className="flex flex-wrap  gap-4 ">
           {cartpackege.cartitem.map((item) => (
             <div
               key={item.id}
@@ -39,4 +39,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default Cart;

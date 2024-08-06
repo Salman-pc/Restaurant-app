@@ -10,7 +10,7 @@ function FilteredDishes() {
     const [filtermenu, setfiltermenu] = useState([]);
     const [active, setactive] = useState("Beef");
     const [currentpage, setcurrentpage] = useState(1);
-    const [itemsperpage, setitemperpage] = useState(4);
+    const [itemsperpage] = useState(4);
 
     // Get categories
     async function getcategories() {
@@ -42,7 +42,7 @@ function FilteredDishes() {
     let resultsinglecategory = singlecategory.map((item, index) => {
         if (maxitem > index) {
             return (
-                <li key={item.idMeal} className=" xl:w-[200px] h-auto lg:w-[180px] md:w-[160px] w-[140px] mx-auto">
+                <li key={item.idMeal} className=" transition-transform duration-300 hover:scale-105 xl:w-[200px] h-auto lg:w-[180px] md:w-[160px] w-[140px] mx-auto">
                 <img 
                     src={item.strMealThumb} 
                     className="w-full h-[100px] object-cover rounded-lg" 
@@ -73,7 +73,7 @@ function FilteredDishes() {
             <li
                 key={item.idCategory}
                 
-                className={`cursor-pointer px-4 py-2 rounded-md ${item.strCategory === active ? 'bg-[#dba607] text-white' : 'hover:bg-gray-200'}`}
+                className={`cursor-pointer transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-md ${item.strCategory === active ? 'bg-[#dba607] text-white' : 'hover:bg-gray-200'}`}
                 onClick={() => showfilterdDisheshandler(item.strCategory)}
             >
                 {item.strCategory}
@@ -82,8 +82,8 @@ function FilteredDishes() {
     });
 
     return (
-        <div className="filtered-dishes font-mono h-auto pt-8 m-auto  w-full">
-            <div className="container">
+        <div className="filtered-dishes font-mono  pt-8 m-auto h-auto w-full">
+            <div className="container h-auto w-auto">
                 <div className="text-center mb-8">
                     <h2 className="filtered-dishes-content text-3xl pb-4">Choose Your Dishes</h2>
                     <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sint id voluptatibus explicabo dignissimos obcaecati!</p>
@@ -97,14 +97,14 @@ function FilteredDishes() {
                             {resultsinglecategory}
                         </ul>
                     </div>
-                    <div className="filtered-dishes-results w-full ">
+                    <div className="filtered-dishes-results m-auto w-full h-auto">
                         
-                        <ul className=" w-full flex-wrap text-lg flex justify-center gap-4 ">
+                        <ul className=" m-auto w-full flex-wrap text-lg flex justify-center gap-4 ">
                             
-                            {resultsinglecategory !== 0 || filtermenu.length !== 0 ? 
+                            {resultsinglecategory != 0 || filtermenu.length != 0  ? 
                                 showthedishesnow
                              : (
-                                <div className="alert text-center">
+                                <div className="alert mx-5 w-full text-center">
                                     <h3 className="font-semibold text-xl">Sorry, no items found!</h3>
                                     <h4 className="text-gray-600">Please choose another dish category.</h4>
                                 </div>

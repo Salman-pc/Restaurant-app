@@ -1,41 +1,52 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import image from '../asetes/image.png';
+import image from '../asetes/image.png'; // Ensure this path is correct
 
 function Header() {
   const [showNavItems, setShowNavItems] = useState(true);
 
-  const handleCheckoutClick = () => {
-    setShowNavItems(false);
+  const handleHomeClick = () => {
+    setShowNavItems(true); // Ensure "Home" shows the navbar items
+  };
+
+  const handleCartClick = () => {
+    setShowNavItems(false); // Hide "About" and "Account" when "Cart" is clicked
+  };
+
+  const handleAccountClick = () => {
+    setShowNavItems(false); // Hide navbar items when account icon is clicked
   };
 
   return (
     <header className='heder bg-[#dba607] flex fixed z-10 items-center w-full h-[75px] shadow-lg p-2'>
       <nav className='flex h-full w-full'>
-        <div className='logo w-16 h-7'>
+        <div className='logo w-[61px] h-7'>
           <RouterLink to='/'>
-            <img className='rounded-full ml-2' src={image} alt="Logo" />
+            <img className='rounded-full ml-2 transition-transform duration-300 hover:scale-105' src={image} alt="Logo" />
           </RouterLink>
         </div>
         <ul className='flex ml-auto space-x-4 items-center mr-4'>
           <li>
-            <RouterLink to='/' className='homecheckout hover:text-gray-500' onClick={() => setShowNavItems(true)}>Home</RouterLink>
+            <RouterLink to='/' className='homecheckout hover:text-gray-500' onClick={handleHomeClick}>Home</RouterLink>
           </li>
           <li>
-            <RouterLink to='/checkout' className='homecheckout hover:text-gray-500' onClick={handleCheckoutClick}>Checkout</RouterLink>
+            <RouterLink to='/checkout' className='homecheckout hover:text-gray-500' onClick={handleCartClick}>Cart</RouterLink>
           </li>
           {showNavItems && (
             <>
               <li>
-                <ScrollLink to="about-section" smooth={true} duration={500} offset={-70} className='cursor-pointer homecheckout hover:text-gray-500'>
+                <ScrollLink to="footer-section" smooth={true} duration={500} offset={-70} className='cursor-pointer homecheckout hover:text-gray-500'>
                   About
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink to="contact-section" smooth={true} duration={500} offset={-70} className='homecheckout cursor-pointer hover:text-gray-500'>
-                  Contact
-                </ScrollLink>
+              <RouterLink to="/login"> 
+                  <button className='focus:outline-none' onClick={handleAccountClick}>
+                    <i className="fas fa-user-circle text-xl hover:text-gray-500"></i>
+                  </button>
+              </RouterLink>
+                
               </li>
             </>
           )}

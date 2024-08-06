@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 function ContactUs() {
   return (
-    <section id="contact-section" className="contact-us bg-gray-100 py-10 bg-opacity-35 px-5 md:px-20 lg:px-40">
+    <section className="contact-us bg-gray-100 py-10 bg-opacity-35 px-6 m-0 md:px-20 lg:px-40">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-serif mb-5">Contact Us</h2>
         <p className="text-lg leading-relaxed mb-6">

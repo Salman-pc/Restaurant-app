@@ -3,7 +3,7 @@ import React from 'react';
 function AboutUs() {
   return (
     
-    <section id="about-section" className=" about-us m-1 bg-gray-100 bg-opacity-35 py-10 shadow-sm px-5 md:px-20 lg:px-40">
+    <section  className=" about-us m-0 bg-gray-100 bg-opacity-35 py-10 shadow-sm px-5 md:px-20 lg:px-40">
         
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-serif mb-5">About Us</h2>

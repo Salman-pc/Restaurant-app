@@ -18,12 +18,12 @@ function Popup({ closepopup, curentdishname }) {
                 src={item.strMealThumb}
                 alt={item.strMeal}
               />
-              <h5 className='absolute top-1 left-1 bg-white text-black sm:p-2 p-[8px] rounded-md'>
+              <h5 className='absolute top-1 left-1 bg-white text-black sm:p-2 p-[8px] rounded-md transition-transform duration-300 hover:scale-105'>
                 {item.strCategory}
               </h5>
               <div>
                 <button
-                  className='bg-[#ffb902] text-black font-bold rounded-md px-6 py-2 mt-6 hover:bg-[#a86e10] transition-all ease-in-out duration-300'
+                  className='bg-[#ffb902] text-black font-bold rounded-md px-6 py-2 mt-6 hover:bg-[#a86e10] transition-all ease-in-out duration-300  hover:scale-105'
                   onClick={() => {
                     dispatch({
                       type: 'addtocart',
@@ -56,7 +56,7 @@ function Popup({ closepopup, curentdishname }) {
             {item.strInstructions}
           </p>
 
-          <button className='bg-[#ffb902] text-black font-bold rounded-md px-6 py-3 mt-6 hover:bg-[#238e0a] transition-all ease-in-out duration-300'>
+          <button className='bg-[#ffb902] hover:scale-105 text-black font-bold rounded-md px-6 py-3 mt-6 hover:bg-[#238e0a] transition-all ease-in-out duration-300'>
             Order Now
           </button>
 

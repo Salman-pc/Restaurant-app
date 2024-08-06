@@ -3,13 +3,15 @@ import SpecialDishes from "./SpecialDishes"
 import FilteredDishes from "./FilteredDishes"
 import {Allmenu} from "./Allmenucontext"
 import Header from "./Header"
-import Checkoout from "./Checkout"
 import About from "./About"
 import {BrowserRouter as Router,Route, Routes} from "react-router-dom"
 import { AppProvider } from "../context/AppProvider"
 import Contact from "./Contact"
 import Footer from "./Footer"
-
+import Cart from "./Cart"
+import LoginPage from "./LoginPage"
+import OurOnlinePartners from "./OnlinePartners"
+import Review from "./Review"
 
 function Menu(){
    
@@ -22,13 +24,17 @@ function Menu(){
                             <Route path="/" element={ <Allmenu>
                                 <Heros/>  
                                 <SpecialDishes />            
-                                <FilteredDishes />
-                                <About/>
-                                <Contact/>
+                                <FilteredDishes /> 
+                                <OurOnlinePartners/>   
+                                <Review/>                        
                                 <Footer/>
                             
                             </Allmenu>}/>
-                            <Route path="/Checkout" element={<Checkoout/>} /> 
+                            <Route path="/login" element={<LoginPage />} />
+                            <Route path="/Checkout" element={<Cart/>} /> 
+                            <Route path="/About" element={ <About/> }/>
+                            <Route path="/Contact" element={ <Contact/> }/>
+                            
                         </Routes>
                     
                 </AppProvider>  

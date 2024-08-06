@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import CardDishes from "./CardDishes";
 import Popup from "./Popup";
 import { Allmenucontexts } from "./Allmenucontext";
-import Addtocart from "./Addtocart";
+//import Addtocart from "./Addtocart";
 
 function SpecialDishes(props){
 
@@ -23,15 +23,14 @@ function SpecialDishes(props){
         setshowpoup(false)
       }
       //pegenation
-    let maxspecialDishes=24;
-    let specialMenus = allmenu.map((menuitem,index)=>
-    {
-        if(index<maxspecialDishes){
-            return(  
-                  <CardDishes menuitem={menuitem} showpoupfn={showpouphandler} />
-            )
-        }    
-    })
+    let maxspecialDishes = 24;
+    let specialMenus = allmenu.map((menuitem, index) => {
+    if (index < maxspecialDishes) {
+        return <CardDishes key={menuitem.id} menuitem={menuitem} showpoupfn={showpouphandler} />;
+    }
+    return null; // Ensures that map returns a value for each item
+    });
+      
 
     //addto cart-> popup
     function addtocarthandular(addtocartimg,addtocarttitle){
