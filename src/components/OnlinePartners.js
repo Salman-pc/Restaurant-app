@@ -16,11 +16,11 @@ function OurOnlinePartners() {
     <div className="flex items-center justify-center h-auto w-full bg-white">
       <div className="w-full bg-white p-6">
         <h2 className="text-2xl font-bold flex justify-center text-gray-900 mb-4">Our Online Partners</h2>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-16">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 w-40 bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+              className="flex flex-col items-center p-4 w-25 md:w-40 bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
             >
               <a
                 href={partner.link}

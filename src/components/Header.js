@@ -20,8 +20,8 @@ function Header() {
 
   return (
     <header className='heder bg-[#dba607] flex fixed z-10 items-center w-full h-[75px] shadow-lg p-2'>
-      <nav className='flex h-full w-full'>
-        <div className='logo w-[61px] h-7'>
+      <nav className='flex h-full  justify-center items-center w-full'>
+        <div className='logo w-[55px] mb-6 h-7'>
           <RouterLink to='/Restaurant-app'>
             <img className='rounded-full ml-2 transition-transform duration-300 hover:scale-105' src={image} alt="Logo" />
           </RouterLink>
@@ -43,7 +43,7 @@ function Header() {
               <li>
               <RouterLink to="/login"> 
                   <button className='focus:outline-none' onClick={handleAccountClick}>
-                    <i className="fas fa-user-circle text-xl hover:text-gray-500"></i>
+                    <i  className="fas fa-user-circle text-3xl hover:text-gray-500"></i>
                   </button>
               </RouterLink>
                 
